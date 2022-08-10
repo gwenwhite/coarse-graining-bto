@@ -1,0 +1,50 @@
+<ForceField>
+  <AtomTypes>
+    <Type name="_A1" class="_A1" element="_A1" mass="132.14" def="_A1" overrides="" desc="Acceptor1 group"/>
+    <Type name="_D" class="_D" element="_D" mass="150.193"  def="_D" overrides="" desc="Donor group"/>
+    <Type name="_A2" class="_A2" element="_A2" mass="238.1519" def="_A2" overrides="" desc="Acceptor2 group"/>
+    <Type name="_SS" class="_SS" element="_SS"  mass="96.0879" def="_SS" overrides="" desc="smal side chain group"/>
+    <Type name="_SL1" class="_SL1" element="_SL1"  mass="72.0659" def="_SL1" overrides="" desc="Long side chain part 1 group"/>
+    <Type name="_SL2" class="_SL2" element="_SL2"  mass="60.0549" def="_SL2" overrides="" desc="Long side chain part 2 group"/>
+      
+  </AtomTypes>
+  <NonbondedForce coulomb14scale="0.833333333" lj14scale="0.">
+    <Atom type="_A1" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
+    <Atom type="_D" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
+    <Atom type="_A2" charge="0.0" sigma="0.259964245953351" epsilon="0.06276"/>
+    <Atom type="_SS" charge="0.0" sigma="0.0" epsilon="0.00001"/>
+    <Atom type="_SL1" charge="0.0" sigma="0.2959921901149464" epsilon="0.87864"/>
+    <Atom type="_SL2" charge="0.0" sigma="0.3066473387839048" epsilon="0.8803136"/>
+  </NonbondedForce>
+  <HarmonicBondForce>
+    <Bond class1="_D" class2="_A1" length="0.5070" k="100"/>
+    <Bond class1="_D" class2="_A1" length="0.5070" k="100"/>
+    <Bond class1="_A2" class2="_D" length="0.7108" k="100"/>
+    <Bond class1="_SS" class2="_D" length="0.5295" k="100"/>
+    <Bond class1="_SL1" class2="_D" length="0.5679" k="100"/>  
+    <Bond class1="_A2" class2="_D" length="0.7108" k="100"/>
+    <Bond class1="_SS" class2="_D" length="0.5414" k="100"/>  
+    <Bond class1="_SL1" class2="_D" length="0.5679" k="100"/>   
+    <Bond class1="_SL2" class2="_SL1" length="0.6916" k="100"/>
+    <Bond class1="_SL2" class2="_SL1" length="0.6916" k="100"/>      
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle class1="_D" class2="_A1" class3="_D" angle="2.053" k="2000"/>
+    <Angle class1="_SL1" class2="_D" class3="_A" angle="1.738" k="100"/>
+    <Angle class1="_A1" class2="_D" class3="_SS" angle="1.365" k="100"/>
+    <Angle class1="_D" class2="_SL1" class3="_SL2" angle="2.719" k="100"/>
+    <Angle class1="_SS" class2="_D" class3="_A2" angle="1.659" k="100"/>
+    <Angle class1="_A1" class2="_D" class3="_A2" angle="2.96" k="2000"/>
+    <Angle class1="_A1" class2="_D" class3="_SL1" angle="1.73" k="100"/>
+    <Angle class1="_A2" class2="_D" class3="_SL1" angle="1.73" k="100"/>
+    <Angle class1="_SS" class2="_D" class3="_SL1" angle="2.532" k="100"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper class1="_D" class2="_A1" class3="_D" class4="_SL1" periodicity1="2" k1="2000" phase1="3.2441"/>
+    <Proper class1="_A1" class2="_D" class3="_SL1" class4="_SL2" periodicity1="2" k1="100" phase1="0.06689847"/>
+    <Proper class1="_D" class2="_A1" class3="_D" class4="_A2" periodicity1="2" k1="2000" phase1="0.402"/>
+    <Proper class1="_D" class2="_A1" class3="_D" class4="_SS" periodicity1="2" k1="100" phase1="0.710"/>
+    <Proper class1="_A2" class2="_D" class3="_SL1" class4="_SL2" periodicity1="2" k1="100" phase1="3.1561"/>
+    <Proper class1="_SS" class2="_D" class3="_SL1" class4="_SL2" periodicity1="2" k1="100" phase1="1.502"/>
+  </PeriodicTorsionForce>
+</ForceField>
